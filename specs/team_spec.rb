@@ -21,7 +21,7 @@ end
 
 def test_new_coach
   team = Team.new("Glasgow Gosberries", ["Bob", "Greg", "Frank"], "Big Dave")
-  team.new_coach("Bigger Dave")
+  team.coach="Bigger Dave"
   assert_equal("Bigger Dave", team.coach)
 
 end
