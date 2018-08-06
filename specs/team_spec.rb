@@ -31,4 +31,15 @@ def test_add_player
   assert_equal(["Bob", "Greg", "Frank", "Matt"], team.players)
 end
 
+def test_check_player__true
+  team = Team.new("Glasgow Gosberries", ["Bob", "Greg", "Frank"], "Big Dave")
+  assert_equal(true, team.check_player("Frank"))
+end
+
+
+def test_check_player__false
+  team = Team.new("Glasgow Gosberries", ["Bob", "Greg", "Frank"], "Big Dave")
+  assert_equal(false, team.check_player("Gary"))
+end
+
 end
