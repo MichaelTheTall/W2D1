@@ -1,16 +1,9 @@
 class Team
 
-  def initialize(name, cohort)
+  def initialize(name, players, coach)
     @name = name
-    @cohort = cohort
-  end
-
-  def talk
-    return "I can talk!"
-  end
-
-  def say_favourite_language(lang)
-    return "I love #{lang}"
+    @players = players
+    @coach = coach
   end
 
 end
