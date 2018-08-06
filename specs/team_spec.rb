@@ -47,4 +47,10 @@ def test_win_points
   assert_equal(1, team.win)
 end
 
+def test_win_points_other
+  team = Team.new("Edinburgh Elderflowers", ["Tarquin", "William", "Percibald"], "Large Leopold")
+  assert_equal(1, team.win)
+end
+
+
 end
