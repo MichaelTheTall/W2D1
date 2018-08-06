@@ -19,4 +19,11 @@ def test_get_coach
   assert_equal("Big Dave", team.coach)
 end
 
+def test_new_coach
+  team = Team.new("Glasgow Gosberries", ["Bob", "Greg", "Frank"], "Big Dave")
+  team.new_coach("Bigger Dave")
+  assert_equal("Bigger Dave", team.coach)
+
+end
+
 end

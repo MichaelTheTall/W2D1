@@ -18,4 +18,8 @@ def coach
   return @coach
 end
 
+def new_coach(new)
+  @coach = new
+end
+
 end
