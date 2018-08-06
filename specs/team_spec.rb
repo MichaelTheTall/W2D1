@@ -42,4 +42,9 @@ def test_check_player__false
   assert_equal(false, team.check_player("Gary"))
 end
 
+def test_win_points
+  team = Team.new("Glasgow Gosberries", ["Bob", "Greg", "Frank"], "Big Dave")
+  assert_equal(1, team.win)
+end
+
 end

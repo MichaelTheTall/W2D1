@@ -6,29 +6,19 @@ class Team
     @name = name
     @players = players
     @coach = coach
+    @points = 0
   end
 
   def add_player(new)
     @players.push(new)
   end
 
-def check_player(name)
-  return @players.include?(name)
-end
-  #   def name
-  #     return @name
-  #   end
-  #
-  # def players
-  #   return @players
-  # end
-  #
-  # def coach
-  #   return @coach
-  # end
-  #
-  # def new_coach(new)
-  #   @coach = new
-  # end
+  def check_player(name)
+    return @players.include?(name)
+  end
 
+  def win
+    @points += 1
+  end
+  
 end
