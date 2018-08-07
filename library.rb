@@ -1,7 +1,7 @@
 class Library
   attr_accessor(:books)
 
-  def initialize(books)
+  def initialize(books = [])
     @books = books
   end
 
@@ -9,12 +9,14 @@ class Library
     for b in @books
       return b if b[:title] == title
     end
+    return nil
   end
 
   def get_rental_info(title)
     for b in @books
       return b[:rental_details] if b[:title] == title
     end
+    return "Book not found."
   end
 
   def add_book(new)
@@ -28,6 +30,7 @@ class Library
         b[:rental_details][:date] = date
       end
     end
+    return "Book not found."
   end
 
 end
